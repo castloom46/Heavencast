@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { LegalLayout } from "@/components/site/LegalLayout";
 
 export const Route = createFileRoute("/legal/cookies")({
-  head: () => ({ meta: [{ title: "Cookie Policy — HeavenCast" }, { name: "description", content: "How HeavenCast uses cookies and similar technologies." }] }),
+  head: () => ({ meta: [{ title: "Cookie Policy. HeavenCast" }, { name: "description", content: "How HeavenCast uses cookies and similar technologies." }] }),
   component: () => (
     <LegalLayout
       title="Cookie Policy"

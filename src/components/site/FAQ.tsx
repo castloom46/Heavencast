@@ -4,11 +4,11 @@ import { Plus } from "lucide-react";
 
 const faqs = [
   { q: "Do I need a smart TV to use HeavenCast?", a: "No. Our devices plug into any TV with HDMI and instantly turn it into a smart TV." },
-  { q: "Which streaming apps are supported?", a: "All the major ones — Netflix, Disney+, Prime Video, Apple TV+, YouTube, plus 10,000+ free channels." },
-  { q: "Is professional installation included?", a: "Standard shipping is free. White-glove install is available in 80+ cities for a flat $79." },
+  { q: "Which streaming apps are supported?", a: "All the major ones: Netflix, Disney+, Prime Video, Apple TV+, YouTube, plus 10,000+ free channels." },
+  { q: "Is professional installation included?", a: "Standard shipping is free. White glove install is available in 80+ cities for a flat $79." },
   { q: "Can I share my subscription with family?", a: "Yes. Every plan includes 6 individual profiles with personalized recommendations and parental controls." },
   { q: "What about my privacy?", a: "Your viewing data never leaves your account. We don't sell it. Period." },
-  { q: "Is there a free trial?", a: "Devices come with a 30-day money-back guarantee and 1 month of HeavenCast+ on us." },
+  { q: "Is there a free trial?", a: "Devices come with a 30 day money back guarantee and 1 month of HeavenCast+ on us." },
 ];
 
 export function FAQ() {

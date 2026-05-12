@@ -6,8 +6,8 @@ import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — HeavenCast" },
-      { name: "description", content: "Reach our streaming experts 24/7. Sales, support, partnerships — we're here." },
+      { title: "Contact HeavenCast" },
+      { name: "description", content: "Reach our streaming experts 24/7. Sales, support, partnerships. We're here." },
       { property: "og:title", content: "Contact HeavenCast" },
       { property: "og:description", content: "We're here 24/7. Let's get you streaming." },
     ],
@@ -28,7 +28,7 @@ function ContactPage() {
       <Section
         eyebrow="Contact"
         title={<>Let's get you <span className="text-gradient">streaming</span></>}
-        subtitle="Questions, demos, partnerships — our team usually replies in under 5 minutes."
+        subtitle="Questions, demos, partnerships. Our team usually replies in under 5 minutes."
       />
 
       <div className="container mx-auto px-6 grid lg:grid-cols-5 gap-8">

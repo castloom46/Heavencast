@@ -6,7 +6,7 @@ import family from "@/assets/family.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — HeavenCast" },
+      { title: "About HeavenCast" },
       { name: "description", content: "We're building the smartest entertainment ecosystem for the modern home. Meet the team behind HeavenCast." },
       { property: "og:title", content: "About HeavenCast" },
       { property: "og:description", content: "Our mission: stream smarter, live brighter." },
@@ -23,8 +23,8 @@ const milestones = [
 ];
 
 const team = [
-  { n: "Jordan Reyes", r: "CEO & Co-founder" },
-  { n: "Sasha Petrov", r: "CTO & Co-founder" },
+  { n: "Jordan Reyes", r: "CEO & Cofounder" },
+  { n: "Sasha Petrov", r: "CTO & Cofounder" },
   { n: "Imani Clarke", r: "Head of Design" },
   { n: "Kenji Watanabe", r: "VP of Engineering" },
 ];
@@ -56,7 +56,7 @@ function AboutPage() {
         <div className="grid md:grid-cols-2 gap-12">
           <p className="text-lg text-muted-foreground">
             Streaming should not require a tech degree. We design devices, software and services
-            that vanish into the background — so what's left is the story on the screen and the
+            that vanish into the background, so what's left is the story on the screen and the
             people watching it with you.
           </p>
           <p className="text-lg text-muted-foreground">

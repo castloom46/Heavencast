@@ -8,10 +8,10 @@ import music from "@/assets/exp-music.jpg";
 import podcast from "@/assets/exp-podcast.jpg";
 
 const items = [
-  { icon: Tv, title: "Live TV", desc: "200+ live channels and free over-the-air streams.", img: livetv, span: "md:col-span-2 md:row-span-2 min-h-[420px]" },
+  { icon: Tv, title: "Live TV", desc: "200+ live channels and free over the air streams.", img: livetv, span: "md:col-span-2 md:row-span-2 min-h-[420px]" },
   { icon: Film, title: "Movies", desc: "Blockbusters and indie gems on demand.", img: movies, span: "min-h-[200px]" },
   { icon: Trophy, title: "Sports", desc: "Live games, scores and replays.", img: sports, span: "min-h-[200px]" },
-  { icon: Baby, title: "Kids", desc: "Safe, hand-curated entertainment.", img: kids, span: "min-h-[200px]" },
+  { icon: Baby, title: "Kids", desc: "Safe, hand curated entertainment.", img: kids, span: "min-h-[200px]" },
   { icon: Music, title: "Music", desc: "Lossless audio in every room.", img: music, span: "min-h-[200px]" },
   { icon: Radio, title: "Podcasts", desc: "10M+ shows synced across devices.", img: podcast, span: "md:col-span-2 min-h-[260px]" },
 ];
@@ -21,7 +21,7 @@ export function ExperienceBento() {
     <Section
       eyebrow="Streaming Experience"
       title={<>One ecosystem, <span className="text-gradient">every screen</span></>}
-      subtitle="Movies, sports, music and more — beautifully unified across devices."
+      subtitle="Movies, sports, music and more, beautifully unified across devices."
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
         {items.map(({ icon: Icon, title, desc, img, span }) => (

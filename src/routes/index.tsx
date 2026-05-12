@@ -13,9 +13,9 @@ import { FinalCTA } from "@/components/site/FinalCTA";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "HeavenCast — Stream smarter. Live brighter." },
+      { title: "HeavenCast. Stream smarter. Live brighter." },
       { name: "description", content: "Premium streaming devices and entertainment services for the modern home. 4K HDR, voice remote, family profiles." },
-      { property: "og:title", content: "HeavenCast — Stream smarter. Live brighter." },
+      { property: "og:title", content: "HeavenCast. Stream smarter. Live brighter." },
       { property: "og:description", content: "Unlimited streaming. One powerful platform." },
     ],
   }),

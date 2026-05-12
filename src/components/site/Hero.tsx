@@ -16,7 +16,7 @@ export function Hero() {
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8 animate-fade-up">
           <span className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs font-medium">
             <span className="h-1.5 w-1.5 rounded-full bg-neon-pink animate-pulse" />
-            24/7 US-based experts on call
+            24/7 US based experts on call
           </span>
           <span className="hidden sm:inline-flex items-center gap-1.5 glass rounded-full px-4 py-1.5 text-xs font-medium">
             <Star className="h-3 w-3 text-neon-orange" fill="currentColor" /> 4.9 from 12,400+ homes
@@ -32,10 +32,10 @@ export function Hero() {
           </h1>
           <p className="mt-6 max-w-2xl mx-auto text-base sm:text-lg text-muted-foreground px-2">
             HeavenCast unifies every movie, live channel, sport and song across every screen
-            in your home — set up in one phone call by a real human, not a chatbot.
+            in your home. Set up in one phone call by a real human, not a chatbot.
           </p>
 
-          {/* Primary CTAs — both go to phone */}
+          {/* Primary CTAs, both go to phone */}
           <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center px-2">
             <a
               href={PHONE_TEL}
@@ -48,7 +48,7 @@ export function Hero() {
               className="glass-strong px-6 sm:px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-white/10 transition"
             >
               <Play className="h-4 w-4" fill="currentColor" />
-              Tap to dial — Free setup
+              Tap to dial. Free setup
             </a>
           </div>
         </div>
@@ -74,7 +74,7 @@ export function Hero() {
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Now Streaming</div>
-                  <div className="font-semibold truncate text-sm sm:text-base">Cosmic Drift — Live in 4K HDR</div>
+                  <div className="font-semibold truncate text-sm sm:text-base">Cosmic Drift. Live in 4K HDR</div>
                   <div className="mt-2 h-1 bg-white/10 rounded-full overflow-hidden">
                     <div className="h-full w-2/3 bg-brand" />
                   </div>
@@ -136,7 +136,7 @@ export function Hero() {
         {/* Trust marquee */}
         <div className="mt-14 md:mt-20 overflow-hidden">
           <div className="flex gap-12 animate-marquee whitespace-nowrap opacity-70">
-            {[..."Dolby Vision · HDR10+ · Wi-Fi 6E · AirPlay 2 · Bluetooth 5.3 · Atmos · Chromecast · 8K Ready".split(" · "), ..."Dolby Vision · HDR10+ · Wi-Fi 6E · AirPlay 2 · Bluetooth 5.3 · Atmos · Chromecast · 8K Ready".split(" · ")].map((b, i) => (
+            {[..."Dolby Vision · HDR10+ · WiFi 6E · AirPlay 2 · Bluetooth 5.3 · Atmos · Chromecast · 8K Ready".split(" · "), ..."Dolby Vision · HDR10+ · WiFi 6E · AirPlay 2 · Bluetooth 5.3 · Atmos · Chromecast · 8K Ready".split(" · ")].map((b, i) => (
               <span key={i} className="text-sm font-semibold tracking-wide">{b}</span>
             ))}
           </div>

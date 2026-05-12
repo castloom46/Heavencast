@@ -20,8 +20,8 @@ export function LiveSports() {
             Never miss <span className="text-gradient">the action</span>
           </h2>
           <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-            Front-row seats to every game, race and match — in stunning clarity, with
-            multi-view, real-time stats and instant replays.
+            Front row seats to every game, race and match, in stunning clarity, with
+            multi view, real time stats and instant replays.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href={PHONE_TEL} className="bg-cta px-6 py-3 rounded-xl font-semibold flex items-center gap-2 glow-pink">

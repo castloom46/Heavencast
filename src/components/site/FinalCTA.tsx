@@ -23,7 +23,7 @@ export function FinalCTA() {
                 <Phone className="h-6 w-6" /> {PHONE_DISPLAY}
               </a>
             </div>
-            <p className="mt-4 text-xs sm:text-sm text-muted-foreground">Available 24/7 · No wait times · Real US-based humans</p>
+            <p className="mt-4 text-xs sm:text-sm text-muted-foreground">Available 24/7 · No wait times · Real US based humans</p>
           </div>
         </div>
       </div>

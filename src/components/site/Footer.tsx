@@ -16,7 +16,7 @@ export function Footer() {
                 Talk to a <span className="text-gradient">streaming expert</span>
               </h3>
               <p className="mt-3 text-muted-foreground">
-                Real humans, no bots. Free setup, free advice — call us right now.
+                Real humans, no bots. Free setup, free advice. Call us right now.
               </p>
             </div>
             <a
