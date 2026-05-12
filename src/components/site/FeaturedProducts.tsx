@@ -1,4 +1,5 @@
 import { Phone } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { Section } from "./Section";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
 import box from "@/assets/device-box.jpg";
@@ -7,10 +8,10 @@ import hub from "@/assets/device-hub.jpg";
 import cinema from "@/assets/device-cinema.jpg";
 
 const products = [
-  { name: "StreamBox Ultra", tag: "Flagship", desc: "8K HDR, Wi-Fi 6E, AI upscaling.", img: box, glow: "glow-purple" },
-  { name: "StreamStick Pro", tag: "Portable", desc: "4K HDR in your pocket.", img: stick, glow: "glow-pink" },
-  { name: "SmartBeam Hub", tag: "Smart Home", desc: "Voice-first whole-home control.", img: hub, glow: "glow-blue" },
-  { name: "HomeCinema Max", tag: "Theater", desc: "Soundbar + streamer in one.", img: cinema, glow: "" },
+  { name: "StreamBox Ultra", slug: "streambox-ultra", tag: "Flagship", desc: "8K HDR, Wi-Fi 6E, AI upscaling.", img: box, glow: "glow-purple" },
+  { name: "StreamStick Pro", slug: "streamstick-pro", tag: "Portable", desc: "4K HDR in your pocket.", img: stick, glow: "glow-pink" },
+  { name: "SmartBeam Hub", slug: "smartbeam-hub", tag: "Smart Home", desc: "Voice-first whole-home control.", img: hub, glow: "glow-blue" },
+  { name: "HomeCinema Max", slug: "homecinema-max", tag: "Theater", desc: "Soundbar + streamer in one.", img: cinema, glow: "" },
 ];
 
 export function FeaturedProducts() {
@@ -26,6 +27,12 @@ export function FeaturedProducts() {
             key={p.name}
             className="group relative rounded-3xl glass-strong overflow-hidden flex flex-col hover:-translate-y-2 transition-transform duration-500"
           >
+            <Link
+              to="/products"
+              hash={p.slug}
+              aria-label={`View ${p.name} details`}
+              className="absolute inset-0 z-10 focus:outline-none focus-visible:ring-2 focus-visible:ring-neon-pink rounded-3xl"
+            />
             <div className={`relative aspect-square overflow-hidden ${p.glow}`}>
               <img
                 src={p.img}
@@ -42,7 +49,8 @@ export function FeaturedProducts() {
               <p className="mt-2 text-sm text-muted-foreground flex-1">{p.desc}</p>
               <a
                 href={PHONE_TEL}
-                className="mt-5 bg-cta px-4 py-3 rounded-xl font-semibold flex items-center justify-center gap-2 glow-pink text-sm"
+                onClick={(e) => e.stopPropagation()}
+                className="relative z-20 mt-5 bg-cta px-4 py-3 rounded-xl font-semibold flex items-center justify-center gap-2 glow-pink text-sm"
               >
                 <Phone className="h-4 w-4" /> {PHONE_DISPLAY}
               </a>

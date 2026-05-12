@@ -21,19 +21,19 @@ export const Route = createFileRoute("/products")({
 });
 
 const products = [
-  { name: "StreamBox Ultra", img: box, tag: "Flagship", glow: "glow-purple",
+  { name: "StreamBox Ultra", slug: "streambox-ultra", img: box, tag: "Flagship", glow: "glow-purple",
     desc: "Our most powerful streamer. 8K HDR, AI upscaling and the snappiest interface ever shipped.",
     specs: { Resolution: "8K @ 60fps", HDR: "Dolby Vision, HDR10+", "Wi-Fi": "Wi-Fi 6E tri-band", Storage: "32 GB", Audio: "Dolby Atmos" },
     has: { "4K HDR": true, "8K": true, Voice: true, Atmos: true, Ethernet: true } },
-  { name: "StreamStick Pro", img: stick, tag: "Portable", glow: "glow-pink",
+  { name: "StreamStick Pro", slug: "streamstick-pro", img: stick, tag: "Portable", glow: "glow-pink",
     desc: "Pocketable 4K HDR streamer. Travel-ready and TV-ready in seconds.",
     specs: { Resolution: "4K @ 60fps", HDR: "HDR10+", "Wi-Fi": "Wi-Fi 6 dual-band", Storage: "8 GB", Audio: "Dolby Digital+" },
     has: { "4K HDR": true, "8K": false, Voice: true, Atmos: false, Ethernet: false } },
-  { name: "SmartBeam Hub", img: hub, tag: "Smart Home", glow: "glow-blue",
+  { name: "SmartBeam Hub", slug: "smartbeam-hub", img: hub, tag: "Smart Home", glow: "glow-blue",
     desc: "A voice-first hub that ties your whole home together — TV, lights, speakers, scenes.",
     specs: { Resolution: "4K @ 60fps", HDR: "Dolby Vision", "Wi-Fi": "Wi-Fi 6E", Storage: "16 GB", Audio: "Dolby Atmos" },
     has: { "4K HDR": true, "8K": false, Voice: true, Atmos: true, Ethernet: true } },
-  { name: "HomeCinema Max", img: cinema, tag: "Theater", glow: "",
+  { name: "HomeCinema Max", slug: "homecinema-max", img: cinema, tag: "Theater", glow: "",
     desc: "A streamer and audiophile soundbar in one beautiful enclosure.",
     specs: { Resolution: "4K @ 120fps", HDR: "Dolby Vision IQ", "Wi-Fi": "Wi-Fi 6E", Audio: "5.1.2 Dolby Atmos", Speakers: "9-driver array" },
     has: { "4K HDR": true, "8K": false, Voice: true, Atmos: true, Ethernet: true } },
@@ -52,7 +52,7 @@ function ProductsPage() {
 
       <div className="container mx-auto px-6 space-y-24">
         {products.map((p, i) => (
-          <div key={p.name} className={`grid lg:grid-cols-2 gap-12 items-center ${i % 2 ? "lg:[&>*:first-child]:order-2" : ""}`}>
+          <div key={p.name} id={p.slug} className={`scroll-mt-28 grid lg:grid-cols-2 gap-12 items-center ${i % 2 ? "lg:[&>*:first-child]:order-2" : ""}`}>
             <div className={`relative aspect-square rounded-3xl overflow-hidden glass-strong ${p.glow}`}>
               <img src={p.img} alt={p.name} width={1024} height={1024} loading="lazy" className="w-full h-full object-cover" />
             </div>
