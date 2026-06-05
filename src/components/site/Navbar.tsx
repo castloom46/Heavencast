@@ -1,8 +1,8 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, Mail } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import logo from "@/assets/logo-heavencast.png";
-import { SUPPORT_EMAIL } from "@/lib/contact";
+import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
 
 const links = [
   { to: "/", label: "Home" },
@@ -78,10 +78,10 @@ export function Navbar() {
 
           <div className="hidden md:flex items-center gap-3">
             <a
-              href={`mailto:${SUPPORT_EMAIL}`}
+              href={PHONE_TEL}
               className="bg-cta text-primary-foreground px-4 lg:px-5 py-2.5 rounded-xl text-sm font-semibold hover:opacity-90 transition-opacity glow-pink flex items-center gap-2"
             >
-              <Mail className="h-4 w-4" /> Contact Us
+              <Phone className="h-4 w-4" /> {PHONE_DISPLAY}
             </a>
           </div>
 
@@ -106,10 +106,10 @@ export function Navbar() {
               </Link>
             ))}
             <a
-              href={`mailto:${SUPPORT_EMAIL}`}
+              href={PHONE_TEL}
               className="mt-2 bg-cta text-primary-foreground px-4 py-3 rounded-xl text-center font-semibold flex items-center justify-center gap-2 glow-pink"
             >
-              <Mail className="h-4 w-4" /> Contact Us
+              <Phone className="h-4 w-4" /> {PHONE_DISPLAY}
             </a>
           </div>
         )}

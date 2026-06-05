@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { Twitter, Instagram, Youtube, Facebook, Mail } from "lucide-react";
+import { Twitter, Instagram, Youtube, Facebook, Phone, Mail, MapPin } from "lucide-react";
 import logo from "@/assets/logo-heavencast.png";
-import { SUPPORT_EMAIL, BUSINESS_NAME, BUSINESS_ADDRESS } from "@/lib/contact";
+import { PHONE_DISPLAY, PHONE_TEL, SUPPORT_EMAIL, BUSINESS_NAME, BUSINESS_ADDRESS } from "@/lib/contact";
 
 export function Footer() {
   return (
@@ -20,10 +20,10 @@ export function Footer() {
               </p>
             </div>
             <a
-              href={`mailto:${SUPPORT_EMAIL}`}
+              href={PHONE_TEL}
               className="bg-cta text-primary-foreground px-6 py-5 rounded-2xl font-bold flex items-center justify-center gap-3 hover:opacity-90 transition glow-pink text-lg sm:text-xl"
             >
-              <Mail className="h-6 w-6" /> {SUPPORT_EMAIL}
+              <Phone className="h-6 w-6" /> {PHONE_DISPLAY}
             </a>
           </div>
         </div>
@@ -81,11 +81,21 @@ export function Footer() {
           />
         </div>
 
-        {/* Business identity */}
-        <div className="mt-10 glass rounded-2xl px-6 py-4 text-sm text-muted-foreground">
-          <p className="font-semibold text-foreground mb-1">Business Identity</p>
-          <p>{BUSINESS_NAME} &mdash; {BUSINESS_ADDRESS} &mdash; <a href={`mailto:${SUPPORT_EMAIL}`} className="hover:text-foreground transition">{SUPPORT_EMAIL}</a></p>
-          <p className="mt-1">Independent Service Provider. We provide paid assistance services and are not affiliated with any ISP. Service fees range from $4.99&ndash;$49.99.</p>
+        {/* Business identity with phone, email, address */}
+        <div className="mt-10 glass rounded-2xl px-6 py-5 text-sm text-muted-foreground">
+          <p className="font-semibold text-foreground mb-3">Contact &amp; Business Identity</p>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4">
+            <a href={PHONE_TEL} className="flex items-center gap-2 hover:text-foreground transition">
+              <Phone className="h-4 w-4 shrink-0" /> {PHONE_DISPLAY}
+            </a>
+            <a href={`mailto:${SUPPORT_EMAIL}`} className="flex items-center gap-2 hover:text-foreground transition">
+              <Mail className="h-4 w-4 shrink-0" /> {SUPPORT_EMAIL}
+            </a>
+            <span className="flex items-center gap-2">
+              <MapPin className="h-4 w-4 shrink-0" /> {BUSINESS_ADDRESS}
+            </span>
+          </div>
+          <p className="mt-3">{BUSINESS_NAME} &mdash; Independent Service Provider. We provide paid assistance services and are not affiliated with any ISP. Service fees range from $4.99&ndash;$49.99.</p>
         </div>
 
         <div className="mt-8 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">

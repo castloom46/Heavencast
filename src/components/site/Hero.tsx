@@ -1,6 +1,6 @@
-import { Mail, Play, Sparkles, Tv, Volume2, Radio, Star, ShieldCheck } from "lucide-react";
+import { Phone, Play, Sparkles, Tv, Volume2, Radio, Star, ShieldCheck } from "lucide-react";
 import heroImg from "@/assets/hero-heavencast.jpg";
-import { SUPPORT_EMAIL } from "@/lib/contact";
+import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
 
 export function Hero() {
   return (
@@ -44,10 +44,10 @@ export function Hero() {
           {/* Primary CTAs */}
           <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center px-2">
             <a
-              href={`mailto:${SUPPORT_EMAIL}`}
+              href={PHONE_TEL}
               className="bg-cta text-primary-foreground px-6 sm:px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 glow-pink hover:scale-[1.02] transition text-base sm:text-lg"
             >
-              <Mail className="h-5 w-5" /> Get Assistance
+              <Phone className="h-5 w-5" /> {PHONE_DISPLAY}
             </a>
             <a
               href="/services"
@@ -85,8 +85,8 @@ export function Hero() {
                     <div className="h-full w-2/3 bg-brand" />
                   </div>
                 </div>
-                <a href={`mailto:${SUPPORT_EMAIL}`} className="hidden sm:inline-flex bg-cta px-4 py-2 rounded-lg text-sm font-semibold items-center gap-1.5 glow-pink shrink-0">
-                  <Mail className="h-3.5 w-3.5" /> Get Help
+                <a href={PHONE_TEL} className="hidden sm:inline-flex bg-cta px-4 py-2 rounded-lg text-sm font-semibold items-center gap-1.5 glow-pink shrink-0">
+                  <Phone className="h-3.5 w-3.5" /> {PHONE_DISPLAY}
                 </a>
               </div>
             </div>
