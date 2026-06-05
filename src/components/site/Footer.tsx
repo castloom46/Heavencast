@@ -1,14 +1,14 @@
 import { Link } from "@tanstack/react-router";
-import { Twitter, Instagram, Youtube, Facebook, Phone } from "lucide-react";
+import { Twitter, Instagram, Youtube, Facebook, Mail } from "lucide-react";
 import logo from "@/assets/logo-heavencast.png";
-import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
+import { SUPPORT_EMAIL, BUSINESS_NAME, BUSINESS_ADDRESS } from "@/lib/contact";
 
 export function Footer() {
   return (
     <footer className="relative border-t border-border mt-24 overflow-hidden">
       <div className="absolute inset-0 bg-hero opacity-40 pointer-events-none" />
       <div className="container mx-auto px-6 py-16 relative">
-        {/* Call CTA */}
+        {/* Contact CTA */}
         <div className="glass-strong rounded-3xl p-6 sm:p-8 md:p-12 mb-16 ring-gradient">
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
             <div>
@@ -16,14 +16,14 @@ export function Footer() {
                 Talk to a <span className="text-gradient">streaming expert</span>
               </h3>
               <p className="mt-3 text-muted-foreground">
-                Real humans, no bots. Free setup, free advice. Call us right now.
+                Real humans, no bots. Paid assistance services available. We are an independent provider, not affiliated with any ISP.
               </p>
             </div>
             <a
-              href={PHONE_TEL}
+              href={`mailto:${SUPPORT_EMAIL}`}
               className="bg-cta text-primary-foreground px-6 py-5 rounded-2xl font-bold flex items-center justify-center gap-3 hover:opacity-90 transition glow-pink text-lg sm:text-xl"
             >
-              <Phone className="h-6 w-6" /> {PHONE_DISPLAY}
+              <Mail className="h-6 w-6" /> {SUPPORT_EMAIL}
             </a>
           </div>
         </div>
@@ -37,8 +37,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground max-w-sm">
-              The smartest way to stream. Devices, services, and a connected entertainment
-              ecosystem built for modern homes.
+              Independent service provider offering paid streaming assistance. Not affiliated with Xfinity, Spectrum, AT&amp;T, or any ISP. Service fees: $4.99&ndash;$49.99.
             </p>
             <div className="flex gap-3 mt-6">
               {[Twitter, Instagram, Youtube, Facebook].map((Icon, i) => (
@@ -67,8 +66,8 @@ export function Footer() {
             links={[
               { to: "/about", label: "Our story" },
               { to: "/contact", label: "Support" },
-              { to: "/services", label: "Partners" },
-              { to: "/products", label: "Press" },
+              { to: "/legal/terms", label: "Refund Policy" },
+              { to: "/legal/disclaimer", label: "Disclaimer" },
             ]}
           />
           <FooterCol
@@ -82,9 +81,16 @@ export function Footer() {
           />
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} HeavenCast Inc. All rights reserved.</p>
-          <p>Crafted for the modern living room.</p>
+        {/* Business identity */}
+        <div className="mt-10 glass rounded-2xl px-6 py-4 text-sm text-muted-foreground">
+          <p className="font-semibold text-foreground mb-1">Business Identity</p>
+          <p>{BUSINESS_NAME} &mdash; {BUSINESS_ADDRESS} &mdash; <a href={`mailto:${SUPPORT_EMAIL}`} className="hover:text-foreground transition">{SUPPORT_EMAIL}</a></p>
+          <p className="mt-1">Independent Service Provider. We provide paid assistance services and are not affiliated with any ISP. Service fees range from $4.99&ndash;$49.99.</p>
+        </div>
+
+        <div className="mt-8 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+          <p>© {new Date().getFullYear()} HeavenCast &mdash; {BUSINESS_NAME}. All rights reserved.</p>
+          <p>Independent Service Provider. Not affiliated with any ISP.</p>
         </div>
       </div>
     </footer>

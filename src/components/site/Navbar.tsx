@@ -1,8 +1,8 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Mail } from "lucide-react";
 import logo from "@/assets/logo-heavencast.png";
-import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
+import { SUPPORT_EMAIL } from "@/lib/contact";
 
 const links = [
   { to: "/", label: "Home" },
@@ -27,11 +27,16 @@ export function Navbar() {
   useEffect(() => setOpen(false), [path]);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "py-2" : "py-4"
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Independent Service Provider Banner */}
+      <div className="w-full bg-brand/90 text-white text-center text-xs font-semibold py-2 px-4 tracking-wide">
+        Independent Service Provider &mdash; Not affiliated with Xfinity, Spectrum, or any ISP &mdash; Paid assistance services only
+      </div>
+      <div
+        className={`transition-all duration-500 ${
+          scrolled ? "py-2" : "py-4"
+        }`}
+      >
       <div className="container mx-auto px-4 sm:px-6">
         <div
           className={`flex items-center justify-between rounded-2xl px-3 sm:px-5 py-2.5 sm:py-3 transition-all duration-500 ${
@@ -73,10 +78,10 @@ export function Navbar() {
 
           <div className="hidden md:flex items-center gap-3">
             <a
-              href={PHONE_TEL}
+              href={`mailto:${SUPPORT_EMAIL}`}
               className="bg-cta text-primary-foreground px-4 lg:px-5 py-2.5 rounded-xl text-sm font-semibold hover:opacity-90 transition-opacity glow-pink flex items-center gap-2"
             >
-              <Phone className="h-4 w-4" /> {PHONE_DISPLAY}
+              <Mail className="h-4 w-4" /> Contact Us
             </a>
           </div>
 
@@ -101,13 +106,14 @@ export function Navbar() {
               </Link>
             ))}
             <a
-              href={PHONE_TEL}
+              href={`mailto:${SUPPORT_EMAIL}`}
               className="mt-2 bg-cta text-primary-foreground px-4 py-3 rounded-xl text-center font-semibold flex items-center justify-center gap-2 glow-pink"
             >
-              <Phone className="h-4 w-4" /> {PHONE_DISPLAY}
+              <Mail className="h-4 w-4" /> Contact Us
             </a>
           </div>
         )}
+      </div>
       </div>
     </header>
   );

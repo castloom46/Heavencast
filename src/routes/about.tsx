@@ -2,38 +2,25 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/site/Section";
 import { FinalCTA } from "@/components/site/FinalCTA";
 import family from "@/assets/family.jpg";
+import { BUSINESS_NAME, BUSINESS_ADDRESS, SUPPORT_EMAIL } from "@/lib/contact";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About HeavenCast" },
-      { name: "description", content: "We're building the smartest entertainment ecosystem for the modern home. Meet the team behind HeavenCast." },
+      { name: "description", content: "HeavenCast is an independent service provider offering paid streaming assistance services. Learn about our mission and business identity." },
       { property: "og:title", content: "About HeavenCast" },
-      { property: "og:description", content: "Our mission: stream smarter, live brighter." },
+      { property: "og:description", content: "Independent service provider. Paid streaming assistance. Not affiliated with any ISP." },
     ],
   }),
   component: AboutPage,
 });
 
-const milestones = [
-  { y: "2019", t: "Founded", d: "Two engineers, one stubborn idea: streaming should just work." },
-  { y: "2021", t: "First device", d: "StreamStick ships to 50,000 homes in 8 weeks." },
-  { y: "2023", t: "1M households", d: "Crossed seven figures and launched HeavenCast+." },
-  { y: "2026", t: "Today", d: "2M+ homes streaming smarter across 40 countries." },
-];
-
-const team = [
-  { n: "Jordan Reyes", r: "CEO & Cofounder" },
-  { n: "Sasha Petrov", r: "CTO & Cofounder" },
-  { n: "Imani Clarke", r: "Head of Design" },
-  { n: "Kenji Watanabe", r: "VP of Engineering" },
-];
-
-const stats = [
-  { k: "2M+", v: "Households" },
-  { k: "40", v: "Countries" },
-  { k: "10K+", v: "Channels" },
-  { k: "4.9★", v: "App rating" },
+const values = [
+  { t: "Independent", d: "We are not affiliated with any internet service provider, cable company, or telecom brand." },
+  { t: "Transparent pricing", d: "Service fees range from $4.99 to $49.99 depending on the type of assistance requested." },
+  { t: "Real support", d: "Every interaction is handled by a real person — no bots, no runaround." },
+  { t: "Clear disclosure", d: "We clearly identify ourselves as a paid independent service provider on every page." },
 ];
 
 function AboutPage() {
@@ -41,8 +28,8 @@ function AboutPage() {
     <>
       <Section
         eyebrow="About us"
-        title={<>Building the smartest <span className="text-gradient">living room</span> on Earth</>}
-        subtitle="We believe entertainment should feel effortless, beautiful and a little bit magical."
+        title={<>Independent streaming <span className="text-gradient">assistance</span></>}
+        subtitle="We provide paid assistance services to help you set up and enjoy your streaming experience. We are not affiliated with any internet service provider."
       />
 
       <div className="container mx-auto px-6">
@@ -52,59 +39,64 @@ function AboutPage() {
         </div>
       </div>
 
-      <Section align="left" eyebrow="Our mission" title={<>Less remote, <span className="text-gradient">more wonder</span></>}>
+      {/* Disclosure Banner */}
+      <Section className="!py-10">
+        <div className="glass-strong rounded-3xl p-8 border border-white/10 max-w-3xl mx-auto text-center">
+          <p className="text-lg font-semibold mb-2">Service Disclosure</p>
+          <p className="text-muted-foreground">
+            HeavenCast provides <strong>paid assistance services</strong> and is <strong>not affiliated with any ISP</strong> (Xfinity, Spectrum, AT&amp;T, Cox, or any other carrier).
+            We are an independent third-party service provider. Service fees range from <strong>$4.99 to $49.99</strong> depending on the request.
+          </p>
+        </div>
+      </Section>
+
+      <Section align="left" eyebrow="Our mission" title={<>Streaming help, <span className="text-gradient">done right</span></>}>
         <div className="grid md:grid-cols-2 gap-12">
           <p className="text-lg text-muted-foreground">
-            Streaming should not require a tech degree. We design devices, software and services
-            that vanish into the background, so what's left is the story on the screen and the
-            people watching it with you.
+            Streaming should not require a tech degree. We provide clear, step-by-step paid assistance to help you enjoy your devices, apps, and services — from initial setup to troubleshooting.
           </p>
           <p className="text-lg text-muted-foreground">
-            Every product we ship is judged by a single test: does it make movie night easier,
-            faster and more beautiful? If the answer is no, it doesn't ship.
+            We believe in full transparency: you know what you pay for, who we are, and what we can and cannot do for you. No hidden fees. No misleading branding.
           </p>
         </div>
       </Section>
 
       <Section className="!py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {stats.map((s) => (
-            <div key={s.v} className="glass rounded-2xl p-6 text-center">
-              <div className="text-5xl font-bold text-gradient">{s.k}</div>
-              <div className="mt-2 text-sm text-muted-foreground">{s.v}</div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          {values.map((v) => (
+            <div key={v.t} className="glass rounded-2xl p-6">
+              <div className="font-bold text-gradient mb-2">{v.t}</div>
+              <div className="text-sm text-muted-foreground">{v.d}</div>
             </div>
           ))}
         </div>
       </Section>
 
-      <Section eyebrow="Timeline" title={<>The <span className="text-gradient">story so far</span></>}>
-        <div className="relative max-w-3xl mx-auto">
-          <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-neon-purple via-neon-pink to-neon-blue" />
-          <div className="space-y-10">
-            {milestones.map((m) => (
-              <div key={m.y} className="relative pl-20">
-                <div className="absolute left-0 top-0 h-12 w-12 rounded-2xl bg-brand grid place-items-center font-bold text-sm">
-                  {m.y}
-                </div>
-                <h3 className="text-2xl font-bold">{m.t}</h3>
-                <p className="mt-2 text-muted-foreground">{m.d}</p>
-              </div>
-            ))}
+      {/* Business Identity */}
+      <Section eyebrow="Business Identity" title={<>Who <span className="text-gradient">we are</span></>}>
+        <div className="glass-strong rounded-3xl p-8 md:p-12 max-w-2xl mx-auto">
+          <div className="space-y-4 text-base text-muted-foreground">
+            <div>
+              <span className="block text-xs font-semibold uppercase tracking-widest text-foreground/60 mb-1">Business Owner</span>
+              <span className="text-foreground font-semibold text-lg">{BUSINESS_NAME}</span>
+            </div>
+            <div>
+              <span className="block text-xs font-semibold uppercase tracking-widest text-foreground/60 mb-1">Address</span>
+              <span className="text-foreground">{BUSINESS_ADDRESS}</span>
+            </div>
+            <div>
+              <span className="block text-xs font-semibold uppercase tracking-widest text-foreground/60 mb-1">Email</span>
+              <a href={`mailto:${SUPPORT_EMAIL}`} className="text-foreground hover:text-brand transition">{SUPPORT_EMAIL}</a>
+            </div>
+            <div>
+              <span className="block text-xs font-semibold uppercase tracking-widest text-foreground/60 mb-1">Service Type</span>
+              <span className="text-foreground">Independent Paid Assistance Provider — Not affiliated with any ISP</span>
+            </div>
+            <div>
+              <span className="block text-xs font-semibold uppercase tracking-widest text-foreground/60 mb-1">Pricing</span>
+              <span className="text-foreground">Service fees range from $4.99 to $49.99 depending on the request</span>
+            </div>
           </div>
-        </div>
-      </Section>
-
-      <Section eyebrow="Team" title={<>The <span className="text-gradient">humans</span> behind it</>}>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-          {team.map((t) => (
-            <div key={t.n} className="glass-strong rounded-2xl p-6 text-center">
-              <div className="h-20 w-20 mx-auto rounded-full bg-brand grid place-items-center text-2xl font-bold">
-                {t.n.split(" ").map((s) => s[0]).join("")}
-              </div>
-              <div className="mt-4 font-bold">{t.n}</div>
-              <div className="text-sm text-muted-foreground">{t.r}</div>
-            </div>
-          ))}
         </div>
       </Section>
 

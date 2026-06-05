@@ -1,6 +1,6 @@
-import { Phone, Play, Sparkles, Tv, Volume2, Radio, Star } from "lucide-react";
+import { Mail, Play, Sparkles, Tv, Volume2, Radio, Star, ShieldCheck } from "lucide-react";
 import heroImg from "@/assets/hero-heavencast.jpg";
-import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
+import { SUPPORT_EMAIL } from "@/lib/contact";
 
 export function Hero() {
   return (
@@ -15,8 +15,8 @@ export function Hero() {
         {/* Top status strip */}
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8 animate-fade-up">
           <span className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs font-medium">
-            <span className="h-1.5 w-1.5 rounded-full bg-neon-pink animate-pulse" />
-            24/7 US based experts on call
+            <ShieldCheck className="h-3 w-3 text-neon-pink" />
+            Independent Service Provider
           </span>
           <span className="hidden sm:inline-flex items-center gap-1.5 glass rounded-full px-4 py-1.5 text-xs font-medium">
             <Star className="h-3 w-3 text-neon-orange" fill="currentColor" /> 4.9 from 12,400+ homes
@@ -28,27 +28,33 @@ export function Hero() {
           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.02] tracking-tight">
             Stream the <span className="text-gradient">heavens.</span>
             <br className="hidden sm:block" />
-            <span className="block sm:inline"> Call once, watch forever.</span>
+            <span className="block sm:inline"> Expert setup, every time.</span>
           </h1>
           <p className="mt-6 max-w-2xl mx-auto text-base sm:text-lg text-muted-foreground px-2">
-            HeavenCast unifies every movie, live channel, sport and song across every screen
-            in your home. Set up in one phone call by a real human, not a chatbot.
+            HeavenCast provides paid assistance services to help you set up and enjoy your streaming experience.
+            We are an independent service provider and are not affiliated with any internet or cable company.
           </p>
 
-          {/* Primary CTAs, both go to phone */}
+          {/* Disclosure box */}
+          <div className="mt-6 max-w-2xl mx-auto glass rounded-2xl px-5 py-4 text-sm text-muted-foreground text-left border border-white/10">
+            <p className="font-semibold text-foreground mb-1">Service Disclosure</p>
+            <p>We provide <strong>paid assistance services</strong> and are not affiliated with any ISP (Xfinity, Spectrum, AT&amp;T, etc.). Service fees range from <strong>$4.99&ndash;$49.99</strong> depending on the request. This is not a free service.</p>
+          </div>
+
+          {/* Primary CTAs */}
           <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center px-2">
             <a
-              href={PHONE_TEL}
+              href={`mailto:${SUPPORT_EMAIL}`}
               className="bg-cta text-primary-foreground px-6 sm:px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 glow-pink hover:scale-[1.02] transition text-base sm:text-lg"
             >
-              <Phone className="h-5 w-5" /> Call {PHONE_DISPLAY}
+              <Mail className="h-5 w-5" /> Get Assistance
             </a>
             <a
-              href={PHONE_TEL}
+              href="/services"
               className="glass-strong px-6 sm:px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-white/10 transition"
             >
               <Play className="h-4 w-4" fill="currentColor" />
-              Tap to dial. Free setup
+              View Our Services
             </a>
           </div>
         </div>
@@ -79,8 +85,8 @@ export function Hero() {
                     <div className="h-full w-2/3 bg-brand" />
                   </div>
                 </div>
-                <a href={PHONE_TEL} className="hidden sm:inline-flex bg-cta px-4 py-2 rounded-lg text-sm font-semibold items-center gap-1.5 glow-pink shrink-0">
-                  <Phone className="h-3.5 w-3.5" /> Call now
+                <a href={`mailto:${SUPPORT_EMAIL}`} className="hidden sm:inline-flex bg-cta px-4 py-2 rounded-lg text-sm font-semibold items-center gap-1.5 glow-pink shrink-0">
+                  <Mail className="h-3.5 w-3.5" /> Get Help
                 </a>
               </div>
             </div>
