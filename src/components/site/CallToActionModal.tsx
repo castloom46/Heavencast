@@ -43,7 +43,7 @@ export function CallToActionModal() {
             </h2>
 
             <p className="text-sm md:text-base text-muted-foreground mb-6">
-              Get expert IPTV setup assistance. Free consultation available 24/7.
+              Paid setup help for your own devices and apps. Real humans, available 24/7.
             </p>
 
             {/* Call Button */}

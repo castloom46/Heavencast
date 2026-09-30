@@ -14,11 +14,13 @@ import bundleImg from "@/assets/srv-bundle.jpg";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services HeavenCast" },
-      { name: "description", content: "Streaming setup, smart home integration, premium support and optimization services for modern homes." },
+      { title: "Streaming Setup Help & Services | HeavenCast" },
+      { name: "description", content: "Paid streaming setup help, smart home guidance, and device troubleshooting." },
       { property: "og:title", content: "HeavenCast Services" },
       { property: "og:description", content: "White glove streaming, end to end." },
+      { property: "og:url", content: "https://heavencast.com/services" },
     ],
+    links: [{ rel: "canonical", href: "https://heavencast.com/services" }],
   }),
   component: ServicesPage,
 });
@@ -26,17 +28,17 @@ export const Route = createFileRoute("/services")({
 const services = [
   { icon: Settings, img: setupImg, title: "Streaming Consultation", desc: "A 30 minute session with a streaming strategist to map out the perfect setup for your home, household and budget.", points: ["Personalized device match", "App stack recommendation", "Cost saving subscription audit"] },
   { icon: Home, img: smartImg, title: "Smart Home Integration", desc: "Unify your TVs, speakers, lights and assistants into a single, scene based entertainment system.", points: ["Works with Alexa, Google, Apple", "Multi room sync", "One tap movie scenes"] },
-  { icon: Wrench, img: installImg, title: "Device Setup & Installation", desc: "Certified pros mount, wire, and configure every device, leaving your space spotless.", points: ["Cable management", "Calibration included", "Same day in 80+ cities"] },
-  { icon: CreditCard, img: supportImg, title: "Premium Streaming Support", desc: "24/7 priority support, proactive monitoring and remote diagnostics for your entire ecosystem.", points: ["Dedicated specialist", "Sub 2 minute response", "Hardware on loan during repairs"] },
-  { icon: Gauge, img: optimizeImg, title: "Performance Optimization", desc: "Network audit, mesh tuning and codec calibration for buffer free 4K and 8K streams.", points: ["WiFi heatmap", "QoS tuning", "Streaming benchmark report"] },
-  { icon: Users2, img: bundleImg, title: "Entertainment Bundles", desc: "Curated subscription bundles that save up to 40% versus buying apps individually.", points: ["Mix and match plans", "Single bill", "Cancel anytime"] },
+  { icon: Wrench, img: installImg, title: "Device Setup & Installation", desc: "Experienced technicians mount, wire, and configure your devices, leaving your space spotless.", points: ["Cable management", "Calibration included", "Same-day slots in select areas"] },
+  { icon: CreditCard, img: supportImg, title: "Premium Streaming Support", desc: "Priority support and remote diagnostics guidance for your own devices and apps.", points: ["Dedicated specialist", "Priority response", "Guidance during repairs"] },
+  { icon: Gauge, img: optimizeImg, title: "Performance Optimization", desc: "Network review and settings tuning to help your own streams run smoothly.", points: ["WiFi review", "Settings tuning", "Streaming checkup report"] },
+  { icon: Users2, img: bundleImg, title: "Entertainment Bundles", desc: "We review the subscriptions you already own and suggest ways to save. You keep your own accounts — we never bill for third-party content.", points: ["Subscription review", "Savings suggestions", "You keep your accounts"] },
 ];
 
 const steps = [
   { n: "01", t: "Discover", d: "Tell us about your space, devices and people." },
   { n: "02", t: "Design", d: "We design a tailored streaming blueprint." },
   { n: "03", t: "Deploy", d: "Pros install and configure everything." },
-  { n: "04", t: "Delight", d: "Lifetime priority support keeps it humming." },
+  { n: "04", t: "Delight", d: "Ongoing paid support whenever you need it." },
 ];
 
 function ServicesPage() {
@@ -44,6 +46,7 @@ function ServicesPage() {
     <>
       <Section
         eyebrow="Services"
+        titleAs="h1"
         title={<>Concierge for your <span className="text-gradient">entertainment</span></>}
         subtitle="From first plug to perfect picture. We handle every detail so you just press play."
       />
@@ -61,7 +64,7 @@ function ServicesPage() {
                 <div className="h-14 w-14 rounded-2xl bg-brand grid place-items-center glow-purple">
                   <s.icon className="h-7 w-7" />
                 </div>
-                <h3 className="mt-6 text-3xl md:text-4xl font-bold">{s.title}</h3>
+                <h2 className="mt-6 text-3xl md:text-4xl font-bold">{s.title}</h2>
                 <p className="mt-3 text-muted-foreground text-lg">{s.desc}</p>
                 <ul className="mt-6 space-y-2">
                   {s.points.map((p) => (
@@ -90,7 +93,7 @@ function ServicesPage() {
           {steps.map((s) => (
             <div key={s.n} className="glass rounded-2xl p-6">
               <div className="text-4xl font-bold text-gradient">{s.n}</div>
-              <div className="mt-4 text-xl font-bold">{s.t}</div>
+              <h3 className="mt-4 text-xl font-bold">{s.t}</h3>
               <div className="mt-2 text-sm text-muted-foreground">{s.d}</div>
             </div>
           ))}

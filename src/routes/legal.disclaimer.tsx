@@ -2,28 +2,28 @@ import { createFileRoute } from "@tanstack/react-router";
 import { LegalLayout } from "@/components/site/LegalLayout";
 
 export const Route = createFileRoute("/legal/disclaimer")({
-  head: () => ({ meta: [{ title: "Disclaimer. HeavenCast" }, { name: "description", content: "Disclaimer for HeavenCast — an independent streaming assistance provider not affiliated with any OTT platform or content service." }] }),
+  head: () => ({ meta: [{ title: "Disclaimer. HeavenCast" }, { name: "description", content: "Disclaimer for HeavenCast — an independent service provider not affiliated with any ISP." }], links: [{ rel: "canonical", href: "https://heavencast.com/legal/disclaimer" }] }),
   component: () => (
     <LegalLayout
       title="Disclaimer"
       updated="June 2026"
       sections={[
         {
-          id: "streaming-affiliation",
-          heading: "No affiliation with any streaming platform or content provider",
+          id: "isp-affiliation",
+          heading: "No affiliation with any ISP",
           body: (
             <div className="space-y-3">
-              <p><strong>HeavenCast is an independent streaming assistance provider and is NOT affiliated with, endorsed by, or in any way connected to any over-the-top (OTT) streaming platform, on-demand content provider, or subscription service.</strong></p>
-              <p>This applies to all OTT platforms, streaming services, content providers, and related brands.</p>
-              <p>HeavenCast does not represent any of these companies, cannot access their accounts on your behalf, and is not an official customer service channel for any streaming platform or content provider.</p>
+              <p><strong>HeavenCast is an independent service provider and is NOT affiliated with, endorsed by, or in any way connected to any internet service provider (ISP), cable company, or telecom carrier.</strong></p>
+              <p>This includes but is not limited to: Xfinity, Comcast, Spectrum, Charter Communications, AT&amp;T, Cox Communications, Verizon, CenturyLink, Frontier, HughesNet, Dish Network, DirecTV, or any other brand.</p>
+              <p>HeavenCast does not represent any of these companies, cannot access their systems or accounts on your behalf, and is not a customer service channel for any ISP.</p>
             </div>
           ),
         },
         {
-          id: "business-model",
-          heading: "Business model and compensation",
+          id: "paid-service",
+          heading: "Paid assistance services",
           body: (
-            <p>HeavenCast is an <strong>authorized dealer</strong> for IPTV distribution services. We do not charge customers directly for our services. Instead, we are compensated through commissions paid by IPTV distributors for services we provide. All assistance and setup services are provided at no direct cost to customers.</p>
+            <p>The services offered on this website are <strong>paid assistance services</strong>. We are not a free government program, a charitable service, or a helpline subsidized by any carrier. Fees are disclosed before any charge is made.</p>
           ),
         },
         {
@@ -34,7 +34,7 @@ export const Route = createFileRoute("/legal/disclaimer")({
         {
           id: "third-party",
           heading: "Third party content",
-          body: <p>HeavenCast services may involve assistance with IPTV platforms, streaming applications, and devices. We are not responsible for the availability, terms, or content of those third-party platforms. Subscriptions to third-party services are governed by those providers' own terms.</p>,
+          body: <p>HeavenCast services may involve assistance with third-party streaming applications and devices. We are not responsible for the availability, terms, or content of those third-party platforms. Subscriptions to third-party services (Netflix, Disney+, etc.) are separate from our assistance fees and are governed by those providers' own terms.</p>,
         },
         {
           id: "external",
@@ -44,7 +44,7 @@ export const Route = createFileRoute("/legal/disclaimer")({
         {
           id: "professional",
           heading: "No professional advice",
-          body: <p>Nothing on this site constitutes legal, financial, or professional advice. For questions about streaming subscriptions, billing, or services with content providers, please contact them directly.</p>,
+          body: <p>Nothing on this site constitutes legal, financial, or professional advice. For questions about ISP accounts, billing, or services, please contact your ISP directly.</p>,
         },
         {
           id: "contact",

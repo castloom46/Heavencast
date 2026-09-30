@@ -13,11 +13,13 @@ import { FinalCTA } from "@/components/site/FinalCTA";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "HeavenCast. Stream smarter. Live brighter." },
-      { name: "description", content: "Premium streaming devices and entertainment services for the modern home. 4K HDR, voice remote, family profiles." },
-      { property: "og:title", content: "HeavenCast. Stream smarter. Live brighter." },
-      { property: "og:description", content: "Unlimited streaming. One powerful platform." },
+      { title: "HeavenCast. Paid Streaming Setup Help" },
+      { name: "description", content: "Paid guided setup for your streaming devices and apps you already subscribe to. Independent provider. Fees disclosed before you pay." },
+      { property: "og:title", content: "HeavenCast. Paid Streaming Setup Help" },
+      { property: "og:description", content: "Guided setup help for your own devices and subscriptions." },
+      { property: "og:url", content: "https://heavencast.com/" },
     ],
+    links: [{ rel: "canonical", href: "https://heavencast.com/" }],
   }),
   component: Index,
 });

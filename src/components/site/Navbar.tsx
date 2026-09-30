@@ -30,7 +30,7 @@ export function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Independent Service Provider Banner */}
       <div className="w-full bg-brand/90 text-white text-center text-xs font-semibold py-2 px-4 tracking-wide">
-        Authorized IPTV Distributor Dealer — Free streaming setup services
+        Independent Service Provider &mdash; Not affiliated with any ISP &mdash; Paid assistance services only
       </div>
       <div
         className={`transition-all duration-500 ${

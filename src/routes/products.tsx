@@ -11,18 +11,20 @@ import cinema from "@/assets/device-cinema.jpg";
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
-      { title: "Devices. HeavenCast Streaming Products" },
-      { name: "description", content: "Premium streaming boxes, sticks and hubs. 4K, 8K, voice remote and Wi-Fi 6E. Free shipping." },
+      { title: "Streaming Devices & Setup Help | HeavenCast" },
+      { name: "description", content: "HeavenCast devices and paid setup help. Device prices quoted on call." },
       { property: "og:title", content: "HeavenCast Devices" },
       { property: "og:description", content: "Hardware that disappears. Magic that stays." },
+      { property: "og:url", content: "https://heavencast.com/products" },
     ],
+    links: [{ rel: "canonical", href: "https://heavencast.com/products" }],
   }),
   component: ProductsPage,
 });
 
 const products = [
   { name: "StreamBox Ultra", slug: "streambox-ultra", img: box, tag: "Flagship", glow: "glow-purple",
-    desc: "Our most powerful streamer. 8K HDR, AI upscaling and the snappiest interface ever shipped.",
+    desc: "Our most powerful streamer. 8K HDR and AI upscaling with a fast, simple interface.",
     specs: { Resolution: "8K @ 60fps", HDR: "Dolby Vision, HDR10+", "Wi-Fi": "Wi-Fi 6E tri-band", Storage: "32 GB", Audio: "Dolby Atmos" },
     has: { "4K HDR": true, "8K": true, Voice: true, Atmos: true, Ethernet: true } },
   { name: "StreamStick Pro", slug: "streamstick-pro", img: stick, tag: "Portable", glow: "glow-pink",
@@ -46,8 +48,9 @@ function ProductsPage() {
     <>
       <Section
         eyebrow="Devices"
+        titleAs="h1"
         title={<>Hardware that <span className="text-gradient">disappears</span></>}
-        subtitle="Quietly powerful. Beautifully designed. Built to last."
+        subtitle="Quietly powerful. Beautifully designed. Device prices quoted on call."
       />
 
       <div className="container mx-auto px-6 space-y-24">

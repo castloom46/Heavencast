@@ -4,7 +4,7 @@ import { Section } from "./Section";
 const features = [
   { icon: Monitor, title: "4K Ultra HD", desc: "Cinema grade visuals with HDR10+ and Dolby Vision support." },
   { icon: Mic, title: "Voice Remote", desc: "Search, launch and control with natural language." },
-  { icon: Wifi, title: "WiFi 6E", desc: "Tri band streaming with no buffering, ever." },
+  { icon: Wifi, title: "WiFi 6E", desc: "Tri band streaming tuned for smooth playback." },
   { icon: Users, title: "Family Profiles", desc: "Personalized rows for everyone in the house." },
   { icon: RefreshCw, title: "Multi Device Sync", desc: "Pause on TV, resume on your phone." },
   { icon: Sparkles, title: "Smart Recs", desc: "AI that actually understands your taste." },

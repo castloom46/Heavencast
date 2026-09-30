@@ -48,12 +48,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
-      { title: "HeavenCast. Premium Streaming Devices & Smart Entertainment" },
-      { name: "description", content: "Stream movies, live TV, sports and more on the smartest entertainment ecosystem built for modern homes." },
-      { property: "og:title", content: "HeavenCast. Premium Streaming Devices" },
-      { property: "og:description", content: "One powerful platform. Unlimited streaming." },
+      { title: "HeavenCast. Paid Streaming Setup Help & Device Guidance" },
+      { name: "description", content: "Paid setup help for your streaming devices and apps. Independent provider, not affiliated with any ISP." },
+      { property: "og:title", content: "HeavenCast. Paid Streaming Setup Help" },
+      { property: "og:description", content: "Guided setup help for your own devices and subscriptions." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:site_name", content: "HeavenCast" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: RootComponent,

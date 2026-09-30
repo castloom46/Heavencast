@@ -45,7 +45,7 @@ export function Hero() {
             Independent Service Provider
           </span>
           <span className="hidden sm:inline-flex items-center gap-1.5 glass rounded-full px-4 py-1.5 text-xs font-medium">
-            <Star className="h-3 w-3 text-neon-orange" fill="currentColor" /> 4.9 from 12,400+ homes
+            <Star className="h-3 w-3 text-neon-orange" fill="currentColor" /> Paid service · Fees disclosed upfront
           </span>
         </div>
 
@@ -57,14 +57,15 @@ export function Hero() {
             <span className="block sm:inline"> Expert setup, every time.</span>
           </h1>
           <p className="mt-6 max-w-2xl mx-auto text-base sm:text-lg text-muted-foreground px-2">
-            HeavenCast provides free assistance services to help you set up and enjoy your IPTV and on-demand content experience.
-            We are an authorized IPTV distributor dealer.
+            HeavenCast provides paid assistance services to help you set up your own streaming devices and
+            subscriptions. We are an independent service provider and are not affiliated with any internet or cable company.
+            We do not provide channels or content.
           </p>
 
           {/* Disclosure box */}
           <div className="mt-6 max-w-2xl mx-auto glass rounded-2xl px-5 py-4 text-sm text-muted-foreground text-left border border-white/10">
             <p className="font-semibold text-foreground mb-1">Service Disclosure</p>
-            <p>We provide <strong>free streaming assistance services</strong> focused on IPTV and on-demand content setup. HeavenCast is an authorized IPTV distributor dealer and does not charge customers directly. We are compensated through commissions from IPTV distributors.</p>
+            <p>We provide <strong>paid assistance services</strong> and are not affiliated with any ISP. This is not a free service.</p>
           </div>
 
           {/* Primary CTAs */}
@@ -123,8 +124,8 @@ export function Hero() {
                 <Tv className="h-5 w-5 text-neon-blue" />
               </div>
               <div>
-                <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Live</div>
-                <div className="font-semibold text-sm">200+ channels</div>
+                <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Guided</div>
+                <div className="font-semibold text-sm">Setup included</div>
               </div>
             </div>
 
@@ -153,10 +154,10 @@ export function Hero() {
         {/* Stat strip */}
         <div className="mt-12 md:mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
           {[
-            { k: "200+", v: "Live channels" },
-            { k: "4K", v: "Dolby Vision" },
+            { k: "1:1", v: "Guided setup" },
+            { k: "4K", v: "Picture tuning" },
             { k: "24/7", v: "Human support" },
-            { k: "1M+", v: "Happy homes" },
+            { k: "7-day", v: "Service review" },
           ].map((s) => (
             <div key={s.v} className="glass rounded-2xl p-4 text-center">
               <div className="text-2xl md:text-3xl font-bold text-gradient">{s.k}</div>

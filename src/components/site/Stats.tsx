@@ -1,10 +1,10 @@
 import { Section } from "./Section";
 
 const stats = [
-  { k: "2M+", v: "Households" },
-  { k: "10K+", v: "Channels & apps" },
-  { k: "99.99%", v: "Stream uptime" },
-  { k: "4.9★", v: "Avg. rating" },
+  { k: "1:1", v: "Guided setup" },
+  { k: "Upfront", v: "Fees confirmed" },
+  { k: "7-day", v: "Service review" },
+  { k: "24/7", v: "Human support" },
 ];
 
 export function Stats() {

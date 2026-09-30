@@ -7,20 +7,22 @@ import { BUSINESS_NAME, BUSINESS_ADDRESS, SUPPORT_EMAIL } from "@/lib/contact";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About HeavenCast" },
-      { name: "description", content: "HeavenCast is an authorized IPTV distributor dealer offering free streaming setup services. Learn about our mission and business identity." },
+      { title: "About HeavenCast | Independent Streaming Setup Help" },
+      { name: "description", content: "HeavenCast is an independent service provider offering paid streaming assistance services. Learn about our mission and business identity." },
       { property: "og:title", content: "About HeavenCast" },
-      { property: "og:description", content: "Authorized IPTV Distributor Dealer. Free streaming setup and support. Commission-based compensation." },
+      { property: "og:description", content: "Independent service provider. Paid streaming assistance. Not affiliated with any ISP." },
+      { property: "og:url", content: "https://heavencast.com/about" },
     ],
+    links: [{ rel: "canonical", href: "https://heavencast.com/about" }],
   }),
   component: AboutPage,
 });
 
 const values = [
-  { t: "Authorized Dealer", d: "We are an authorized IPTV distributor dealer. We do not charge customers — we earn commission from distributors." },
-  { t: "Free Services", d: "All setup and assistance services are provided at no cost to customers." },
+  { t: "Independent", d: "We are not affiliated with any internet service provider, cable company, or telecom brand." },
+  { t: "Transparent pricing", d: "Clear, upfront pricing — confirmed with you before any charge." },
   { t: "Real support", d: "Every interaction is handled by a real person — no bots, no runaround." },
-  { t: "Clear disclosure", d: "We clearly identify ourselves as an authorized dealer on every page." },
+  { t: "Clear disclosure", d: "We clearly identify ourselves as a paid independent service provider on every page." },
 ];
 
 function AboutPage() {
@@ -28,13 +30,14 @@ function AboutPage() {
     <>
       <Section
         eyebrow="About us"
+        titleAs="h1"
         title={<>Independent streaming <span className="text-gradient">assistance</span></>}
-        subtitle="We provide free streaming assistance services to help you set up and optimize your IPTV and on-demand content experience. HeavenCast is an authorized IPTV distributor dealer."
+        subtitle="We provide paid assistance services to help you set up and enjoy your streaming experience. We are not affiliated with any internet service provider."
       />
 
       <div className="container mx-auto px-6">
         <div className="relative rounded-3xl overflow-hidden ring-gradient">
-          <img src={family} alt="Family streaming" width={1280} height={896} loading="lazy" className="w-full h-[480px] object-cover" />
+          <img src={family} alt="Family watching television together in a living room" width={1280} height={896} loading="lazy" className="w-full h-[480px] object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
         </div>
       </div>
@@ -44,8 +47,8 @@ function AboutPage() {
         <div className="glass-strong rounded-3xl p-8 border border-white/10 max-w-3xl mx-auto text-center">
           <p className="text-lg font-semibold mb-2">Service Disclosure</p>
           <p className="text-muted-foreground">
-            HeavenCast provides <strong>free streaming assistance services</strong> and is an <strong>authorized IPTV distributor dealer</strong>.
-            We do not charge customers directly — we are compensated through commissions from IPTV distributors. Our services are free to all customers.
+            HeavenCast provides <strong>paid assistance services</strong> and is <strong>not affiliated with any ISP</strong> or
+            cable company. We help you set up your own devices and subscriptions — we do not provide channels or content.
           </p>
         </div>
       </Section>
@@ -53,10 +56,10 @@ function AboutPage() {
       <Section align="left" eyebrow="Our mission" title={<>Streaming help, <span className="text-gradient">done right</span></>}>
         <div className="grid md:grid-cols-2 gap-12">
           <p className="text-lg text-muted-foreground">
-            Streaming should not require a tech degree. We provide clear, step-by-step free assistance to help you set up and enjoy IPTV platforms, streaming devices, and on-demand services — from initial setup to troubleshooting.
+            Streaming should not require a tech degree. We provide clear, step-by-step paid assistance to help you enjoy your devices, apps, and services — from initial setup to troubleshooting.
           </p>
           <p className="text-lg text-muted-foreground">
-            We believe in full transparency: you know that our services are free, who we are, and how we earn our compensation. No hidden fees. No misleading branding.
+            We believe in full transparency: you know what you pay for, who we are, and what we can and cannot do for you. No hidden fees. No misleading branding.
           </p>
         </div>
       </Section>
@@ -65,7 +68,7 @@ function AboutPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {values.map((v) => (
             <div key={v.t} className="glass rounded-2xl p-6">
-              <div className="font-bold text-gradient mb-2">{v.t}</div>
+              <h3 className="font-bold text-gradient mb-2">{v.t}</h3>
               <div className="text-sm text-muted-foreground">{v.d}</div>
             </div>
           ))}
@@ -90,11 +93,11 @@ function AboutPage() {
             </div>
             <div>
               <span className="block text-xs font-semibold uppercase tracking-widest text-foreground/60 mb-1">Service Type</span>
-              <span className="text-foreground">Authorized IPTV Distributor Dealer — Free streaming setup and support</span>
+              <span className="text-foreground">Independent Paid Assistance Provider — Not affiliated with any ISP</span>
             </div>
             <div>
-              <span className="block text-xs font-semibold uppercase tracking-widest text-foreground/60 mb-1">Compensation Model</span>
-              <span className="text-foreground">Commission-based from IPTV distributors. No charges to customers. All services are free.</span>
+              <span className="block text-xs font-semibold uppercase tracking-widest text-foreground/60 mb-1">Pricing</span>
+              <span className="text-foreground">Fees confirmed with you before any charge</span>
             </div>
           </div>
         </div>

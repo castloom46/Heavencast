@@ -3,12 +3,13 @@ import { useState } from "react";
 import { Plus } from "lucide-react";
 
 const faqs = [
-  { q: "Do I need a smart TV to use HeavenCast?", a: "No. Our devices plug into any TV with HDMI and instantly turn it into a smart TV." },
-  { q: "Which streaming apps are supported?", a: "All major streaming platforms and 10,000+ free channels are supported." },
-  { q: "Is professional installation included?", a: "Standard shipping is free. White glove install is available in 80+ cities for a flat $79." },
-  { q: "Can I share my subscription with family?", a: "Yes. Every plan includes 6 individual profiles with personalized recommendations and parental controls." },
+  { q: "Do I need a smart TV to use HeavenCast?", a: "No. Our paid setup help covers devices that plug into any TV with HDMI. You keep your own devices and subscriptions." },
+  { q: "Which streaming apps can you help me set up?", a: "We help you set up major apps you already subscribe to, such as Netflix, Disney+, Prime Video, Apple TV+ and YouTube. Separate subscriptions are required — we do not provide channels or content." },
+  { q: "Is professional installation included?", a: "Standard device setup guidance is a paid assistance service. In-person installation availability varies by area — call to confirm." },
+  { q: "Can I share my subscription with family?", a: "That depends on your own app subscriptions and their rules. We can walk you through profile and parental-control settings in your own accounts." },
   { q: "What about my privacy?", a: "Your viewing data never leaves your account. We don't sell it. Period." },
-  { q: "Is there a free trial?", a: "Devices come with a 30 day money back guarantee and 1 month of HeavenCast+ on us." },
+  { q: "What does it cost, and what if I'm not satisfied?", a: "This is a paid service — the fee is confirmed before any charge. If the service was not delivered as described, contact us within 7 days as described in our Terms." },
+  { q: "Can you access my ISP or carrier account for me?", a: "No. We are not affiliated with any ISP and cannot access their systems or accounts. For ISP billing or account issues, contact your ISP directly." },
 ];
 
 export function FAQ() {

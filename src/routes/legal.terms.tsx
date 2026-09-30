@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { LegalLayout } from "@/components/site/LegalLayout";
 
 export const Route = createFileRoute("/legal/terms")({
-  head: () => ({ meta: [{ title: "Terms & Conditions. HeavenCast" }, { name: "description", content: "The terms governing your use of HeavenCast free streaming assistance services, including dispute resolution policy." }] }),
+  head: () => ({ meta: [{ title: "Terms & Conditions. HeavenCast" }, { name: "description", content: "The terms governing your use of HeavenCast paid assistance services, including refund and cancellation policy." }], links: [{ rel: "canonical", href: "https://heavencast.com/legal/terms" }] }),
   component: () => (
     <LegalLayout
       title="Terms & Conditions"
@@ -13,31 +13,34 @@ export const Route = createFileRoute("/legal/terms")({
           heading: "Nature of service",
           body: (
             <div className="space-y-3">
-              <p>HeavenCast is an <strong>authorized IPTV distributor dealer</strong>. We provide free assistance services to help individuals set up, troubleshoot, and optimize their streaming devices and services.</p>
-              <p>We are <strong>not affiliated with, endorsed by, or acting as agents of</strong> any over-the-top (OTT) streaming platform, on-demand content provider, or subscription service.</p>
-              <p>Using our services does not create any relationship between you and any streaming content provider.</p>
+              <p>HeavenCast is an <strong>independent service provider</strong>. We offer paid assistance services to help individuals set up, troubleshoot, and optimize their streaming devices and services.</p>
+              <p>We are <strong>not affiliated with, endorsed by, or acting as agents of</strong> any internet service provider (ISP), cable company, or telecom carrier, including but not limited to Xfinity, Spectrum, AT&amp;T, Cox, Verizon, or any other brand.</p>
+              <p>Using our services does not create any relationship between you and any ISP.</p>
             </div>
           ),
         },
         {
-          id: "compensation",
-          heading: "Compensation model",
+          id: "pricing",
+          heading: "Service fees and pricing",
           body: (
             <div className="space-y-3">
-              <p>HeavenCast does <strong>not charge customers directly</strong> for our assistance services. We are compensated through commissions paid by IPTV distributors for services we provide to customers.</p>
-              <p>All setup, troubleshooting, and optimization services are provided at <strong>no cost to customers</strong>.</p>
-              <p>No charges, fees, or payments are collected from end users for the services described on this website.</p>
+              <p>Our services are <strong>paid</strong>. This is not a free helpline. The exact fee applicable to your request will be disclosed to you clearly before you are charged.</p>
+              <p>The exact fee applicable to your request will be disclosed to you clearly before you are charged. You will have the opportunity to review and confirm the fee before proceeding.</p>
+              <p>All prices are in US Dollars (USD) unless otherwise stated.</p>
             </div>
           ),
         },
         {
           id: "refund-cancellation",
-          heading: "Dispute resolution and service issues",
+          heading: "Refund and cancellation policy",
           body: (
             <div className="space-y-3">
-              <p>Since HeavenCast does not charge customers directly, there are no refunds or cancellation fees to process. All services are provided at no direct cost to customers.</p>
-              <p><strong>Service issues:</strong> If you are not satisfied with the assistance provided or experience issues with our service, please contact us at <a href="mailto:support@heavencast.com" className="underline">support@heavencast.com</a> to report the issue. We will work to resolve any problems.</p>
-              <p>For disputes or concerns, customers may also contact the relevant IPTV distributor directly.</p>
+              <p><strong>Cancellation before service delivery:</strong> If you cancel your service request before work has commenced, you are entitled to a full refund. To cancel, contact us at <a href="mailto:support@heavencast.com" className="underline">support@heavencast.com</a> as soon as possible after placing the request.</p>
+              <p><strong>Cancellation after service delivery begins:</strong> Once a technician has begun working on your request, partial charges may apply. You will only be charged for the portion of work completed at the time of cancellation.</p>
+              <p><strong>Dissatisfaction refunds:</strong> If you are not satisfied with the assistance provided, contact us within <strong>7 days</strong> of service delivery at <a href="mailto:support@heavencast.com" className="underline">support@heavencast.com</a>. We will review your case and, where the service was not delivered as described, issue a full or partial refund at our discretion.</p>
+              <p><strong>Non-refundable circumstances:</strong> Refunds will not be issued for services that were delivered as described and accepted by the customer, or for issues arising from third-party hardware, software, or internet service outside our control.</p>
+              <p><strong>Refund processing:</strong> Approved refunds are processed within <strong>5&ndash;10 business days</strong> to the original payment method.</p>
+              <p><strong>Subscription services (if applicable):</strong> If you subscribe to a recurring service plan, you may cancel at any time before the next billing cycle. Cancellations take effect at the end of the current paid period. No prorated refunds are issued for unused days within a billing period, except where required by applicable law.</p>
             </div>
           ),
         },
@@ -59,7 +62,7 @@ export const Route = createFileRoute("/legal/terms")({
         {
           id: "liability",
           heading: "Limitation of liability",
-          body: <p>To the fullest extent allowed by law, we are not liable for indirect, incidental, or consequential damages arising from the use of our services or from third-party hardware, software, or network conditions.</p>,
+          body: <p>To the fullest extent allowed by law, our liability is limited to the amount you paid for the specific service in question. We are not liable for indirect, incidental, or consequential damages arising from the use of our services or from third-party hardware, software, or network conditions.</p>,
         },
         {
           id: "changes",

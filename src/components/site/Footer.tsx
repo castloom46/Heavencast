@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Twitter, Instagram, Youtube, Facebook, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import logo from "@/assets/logo-heavencast.png";
 import { PHONE_DISPLAY, PHONE_TEL, SUPPORT_EMAIL, BUSINESS_NAME, BUSINESS_ADDRESS } from "@/lib/contact";
 
@@ -12,11 +12,11 @@ export function Footer() {
         <div className="glass-strong rounded-3xl p-6 sm:p-8 md:p-12 mb-16 ring-gradient">
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
             <div>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
                 Talk to a <span className="text-gradient">streaming expert</span>
-              </h3>
+              </h2>
               <p className="mt-3 text-muted-foreground">
-                Real humans, no bots. Free assistance services available. We are an authorized IPTV distributor dealer, compensated by distributors, not customers.
+                Real humans, no bots. Paid setup help. Have your device model and app list ready for the fastest help.
               </p>
             </div>
             <a
@@ -37,19 +37,11 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground max-w-sm">
-              Authorized IPTV distributor dealer providing free streaming setup services. We are compensated by IPTV distributors, not customers. No charges to customers.
+              Independent service provider offering paid streaming setup help. Not affiliated with any ISP.
             </p>
-            <div className="flex gap-3 mt-6">
-              {[Twitter, Instagram, Youtube, Facebook].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="h-10 w-10 grid place-items-center rounded-xl glass hover:bg-white/10 transition"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
+            <p className="mt-6 text-xs text-muted-foreground">
+              We do not operate official social support accounts. Beware of impersonators — contact us only via the phone number and email listed on this page.
+            </p>
           </div>
 
           <FooterCol
@@ -95,12 +87,12 @@ export function Footer() {
               <MapPin className="h-4 w-4 shrink-0" /> {BUSINESS_ADDRESS}
             </span>
           </div>
-          <p className="mt-3">{BUSINESS_NAME} &mdash; Authorized IPTV Distributor Dealer. We provide free assistance services. Compensation is from IPTV distributors, not customers. No charges to customers.</p>
+          <p className="mt-3">{BUSINESS_NAME} &mdash; Independent Service Provider. We provide paid assistance services and are not affiliated with any ISP.</p>
         </div>
 
         <div className="mt-8 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} HeavenCast &mdash; {BUSINESS_NAME}. All rights reserved.</p>
-          <p>Authorized IPTV Distributor Dealer. Free services to customers. Commission-based compensation model.</p>
+          <p>Independent Service Provider. Not affiliated with any ISP.</p>
         </div>
       </div>
     </footer>
@@ -116,9 +108,9 @@ function FooterCol({
 }) {
   return (
     <div>
-      <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider text-muted-foreground">
+      <h3 className="font-semibold mb-4 text-sm uppercase tracking-wider text-muted-foreground">
         {title}
-      </h4>
+      </h3>
       <ul className="space-y-3">
         {links.map((l) => (
           <li key={l.to}>

@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { LegalLayout } from "@/components/site/LegalLayout";
 
 export const Route = createFileRoute("/legal/privacy")({
-  head: () => ({ meta: [{ title: "Privacy Policy. HeavenCast" }, { name: "description", content: "How HeavenCast collects, uses and protects your data." }] }),
+  head: () => ({ meta: [{ title: "Privacy Policy. HeavenCast" }, { name: "description", content: "How HeavenCast collects, uses and protects your data." }], links: [{ rel: "canonical", href: "https://heavencast.com/legal/privacy" }] }),
   component: () => (
     <LegalLayout
       title="Privacy Policy"

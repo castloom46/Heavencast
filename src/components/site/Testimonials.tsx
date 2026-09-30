@@ -11,8 +11,9 @@ const reviews = [
 export function Testimonials() {
   return (
     <Section
-      eyebrow="Loved by 2M+ households"
-      title={<>People can't stop <span className="text-gradient">streaming</span></>}
+      eyebrow="Customer experiences"
+      title={<>What customers <span className="text-gradient">say</span></>}
+      subtitle="Example experiences. Individual results vary."
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {reviews.map((r) => (
@@ -28,7 +29,7 @@ export function Testimonials() {
                 {r.name[0]}
               </div>
               <div>
-                <div className="font-semibold">{r.name}</div>
+                <h3 className="font-semibold">{r.name}</h3>
                 <div className="text-xs text-muted-foreground">{r.role}</div>
               </div>
             </div>

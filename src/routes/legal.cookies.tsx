@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { LegalLayout } from "@/components/site/LegalLayout";
 
 export const Route = createFileRoute("/legal/cookies")({
-  head: () => ({ meta: [{ title: "Cookie Policy. HeavenCast" }, { name: "description", content: "How HeavenCast uses cookies and similar technologies." }] }),
+  head: () => ({ meta: [{ title: "Cookie Policy. HeavenCast" }, { name: "description", content: "How HeavenCast uses cookies and similar technologies." }], links: [{ rel: "canonical", href: "https://heavencast.com/legal/cookies" }] }),
   component: () => (
     <LegalLayout
       title="Cookie Policy"
@@ -10,7 +10,7 @@ export const Route = createFileRoute("/legal/cookies")({
       sections={[
         { id: "what", heading: "What are cookies?", body: <p>Cookies are small text files stored on your device. They help us remember preferences, secure your session and measure performance.</p> },
         { id: "types", heading: "Types we use", body: <p>Strictly necessary, performance, functional and analytics cookies. We do not use advertising cookies.</p> },
-        { id: "control", heading: "Your choices", body: <p>You can manage cookies in your browser settings or via our consent banner. Disabling cookies may affect site features.</p> },
+        { id: "control", heading: "Your choices", body: <p>You can manage cookies in your browser settings. Disabling cookies may affect site features.</p> },
         { id: "changes", heading: "Updates", body: <p>We may update this policy periodically. The "Last updated" date above reflects the latest version.</p> },
       ]}
     />

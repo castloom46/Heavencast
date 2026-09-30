@@ -7,6 +7,7 @@ export function Section({
   children,
   className = "",
   align = "center",
+  titleAs = "h2",
 }: {
   eyebrow?: string;
   title?: ReactNode;
@@ -14,7 +15,9 @@ export function Section({
   children?: ReactNode;
   className?: string;
   align?: "center" | "left";
+  titleAs?: "h1" | "h2";
 }) {
+  const TitleTag = titleAs;
   return (
     <section className={`relative py-24 md:py-32 ${className}`}>
       <div className="container mx-auto px-6">
@@ -30,9 +33,9 @@ export function Section({
               </span>
             )}
             {title && (
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05]">
+              <TitleTag className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05]">
                 {title}
-              </h2>
+              </TitleTag>
             )}
             {subtitle && (
               <p className="mt-6 text-lg text-muted-foreground">{subtitle}</p>

@@ -12,7 +12,7 @@ const services = [
   { img: setup, title: "Streaming Setup", desc: "We get you watching in minutes." },
   { img: smart, title: "Smart TV Integration", desc: "One ecosystem, all your devices." },
   { img: install, title: "Device Installation", desc: "Pro install, anywhere in the home." },
-  { img: bundle, title: "Subscription Manager", desc: "All your apps, one bill." },
+  { img: bundle, title: "Subscription Manager", desc: "We help you organize the app subscriptions you already own." },
   { img: support, title: "Premium Support", desc: "24/7 priority help from real humans." },
   { img: optimize, title: "Network Optimization", desc: "Tune your network for perfect streams." },
 ];

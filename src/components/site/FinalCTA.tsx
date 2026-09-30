@@ -13,7 +13,7 @@ export function FinalCTA() {
               Ready to upgrade your <span className="text-gradient">entertainment?</span>
             </h2>
             <p className="mt-6 text-base sm:text-lg text-muted-foreground">
-              One call. Free expert setup. Streaming the same day.
+              Paid expert setup help for your own devices and apps. Have your device model and app list ready.
             </p>
             <div className="mt-8 sm:mt-10 flex justify-center">
               <a
@@ -23,7 +23,7 @@ export function FinalCTA() {
                 <Phone className="h-6 w-6" /> {PHONE_DISPLAY}
               </a>
             </div>
-            <p className="mt-4 text-xs sm:text-sm text-muted-foreground">Available 24/7 · No wait times · Real US based humans</p>
+            <p className="mt-4 text-xs sm:text-sm text-muted-foreground">Paid service · Fee confirmed before payment · Cancel before work starts for a full refund · Real US based humans</p>
           </div>
         </div>
       </div>
